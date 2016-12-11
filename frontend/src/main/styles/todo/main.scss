@@ -1,0 +1,30 @@
+$color-base: white;
+$color-sub: #e4dedf;
+
+@mixin todoBase($margin){
+  word-break: keep-all;
+  float: left;
+  margin-left: $margin;
+}
+
+body {
+  background-color: $color-sub
+}
+
+.header {
+  background-color: $color-base;
+  width: 100%;
+  height: 30px;
+  padding-bottom: 1%;
+}
+
+ul {
+  color: darkblue;
+  list-style:none;
+  padding: 10px;
+  @include todoBase(30px)
+}
+li {
+  margin: 5px;
+  @include todoBase(10px)
+}

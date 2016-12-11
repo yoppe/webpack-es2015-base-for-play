@@ -1,0 +1,34 @@
+/*
+[ESLintの設定]
+eslint-config-standardをベースとしたESLintの設定。
+lodashの_、jQueryの$のような無視してほしいグローバルオブジェクトはglobalsで指定。
+※グローバルオブジェクトは作らないのが望ましい。
+
+rules value:
+  "off" or 0 - turn the rule off
+  "warn" or 1 - turn the rule on as a warning (doesn’t affect exit code)
+  "error" or 2 - turn the rule on as an error (exit code will be 1)
+
+see:
+  all rules: http://eslint.org/docs/rules/
+  eslint-config-standard: https://github.com/feross/eslint-config-standard/blob/master/eslintrc.json
+*/
+
+{
+  "extends": "standard",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "no-var": "error",
+    "arrow-parens": ["error", "as-needed"],
+    "no-console": "warn",
+    "space-before-function-paren": ["error", "never"],
+    "no-new": "warn"
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}

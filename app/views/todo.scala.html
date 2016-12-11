@@ -1,0 +1,36 @@
+@(message: String)
+
+@main("Welcome to Play") {
+
+  <script type="text/javascript" src="@routes.Assets.versioned("todo.bundle.js")"></script>
+
+  @message
+
+  <div class="container">
+    <div class="header">
+      <a href="#" class="clear">Clear</a>
+    </div>
+    <div>
+      <input type="text" class="todoForm">
+    </div>
+    <ul class="todoList">
+      <li class="todo" data-id="1" data-content="hoge">
+        <input type="checkbox">
+        <span>hoge</span>
+        <a href="#" class="close">x</a>
+      </li>
+      <li class="todo" data-id="2" data-content="fuga">
+        <input type="checkbox">
+        <span>fuga</span>
+        <a href="#" class="close">x</a>
+      </li>
+      <li class="todo" data-id="3" data-content="foo">
+        <input type="checkbox">
+        <span>foo</span>
+        <a href="#" class="close">x</a>
+      </li>
+    </ul>
+  </div>
+
+  <span class="loading">テスト用のローディング</span>
+}
